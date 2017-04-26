@@ -187,7 +187,6 @@
     
     label.textColor = textColor;
     label.backgroundColor = backgroundColor;
-    
     return label;
 }
 

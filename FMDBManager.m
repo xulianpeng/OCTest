@@ -30,6 +30,13 @@
     }
     return self;
 }
+
+/**
+ 创建表
+
+ @param table <#table description#>
+ @param sqlStr <#sqlStr description#>
+ */
 - (void)creatTable:(NSString *)table SqlStr:(NSString *)sqlStr{
     
     if (![self.dataBase open]) {
@@ -61,6 +68,16 @@
         }
     }
 }
+
+/**
+ 插入数据
+
+ @param table <#table description#>
+ @param sql <#sql description#>
+ @param dic <#dic description#>
+ @param theValuesArr <#theValuesArr description#>
+ @return <#return value description#>
+ */
 - (BOOL)insertTable:(NSString *)table sql:(NSString *)sql dic:(NSDictionary*)dic orValuesArr:(NSArray *)theValuesArr{
     
     BOOL succeed = NO;
@@ -133,6 +150,14 @@
     return succeed;
 }
 
+/**
+ 查询结果
+
+ @param table <#table description#>
+ @param sql <#sql description#>
+ @param limitArr <#limitArr description#>
+ @return <#return value description#>
+ */
 - (FMResultSet *)queryTable:(NSString *)table sql:(NSString *)sql limitArr:(NSArray *)limitArr{
     FMResultSet *resultSet;
     if ([self.dataBase open]) {
@@ -143,6 +168,14 @@
     return resultSet;
 }
 
+/**
+ 删除表中 某字段下的存储的值
+
+ @param table <#table description#>
+ @param sql <#sql description#>
+ @param limitArr <#limitArr description#>
+ @return <#return value description#>
+ */
 - (BOOL)deleteTable:(NSString *)table aql:(NSString *)sql limitArr:(NSArray *)limitArr{
     BOOL succeed = NO;
     if ([self.dataBase open]) {
@@ -157,6 +190,15 @@
     }
     return succeed;
 }
+
+/**
+ 更新表
+
+ @param table <#table description#>
+ @param sql <#sql description#>
+ @param limitArr <#limitArr description#>
+ @return <#return value description#>
+ */
 - (BOOL)updateTable:(NSString *)table sql:(NSString *)sql limitArr:(NSArray *)limitArr{
     
     BOOL succeed = NO;
@@ -173,6 +215,12 @@
     
 }
 
+/**
+ 废弃表
+
+ @param table <#table description#>
+ @return <#return value description#>
+ */
 - (BOOL)dropTable:(NSString *)table{
     
     BOOL succeed = NO;
@@ -185,6 +233,83 @@
             NSLog(@"======删除表失败==%@",self.dataBase.lastErrorMessage);
         }
         [self.dataBase close];
+    }
+    return succeed;
+}
+- (BOOL)addColumn:(NSString *)column type:(NSString *)type InTable:(NSString *)table{
+    BOOL succeed = NO;
+    if ([self.dataBase open]) {
+        
+        if (![self.dataBase columnExists:column inTableWithName:table]) {
+            
+            NSString *sql = [NSString stringWithFormat:@"ALTER TABLE %@ ADD %@ %@",table,column,type];
+            succeed = [self.dataBase executeUpdate:sql withArgumentsInArray:nil];
+            
+            if (!succeed) {
+                NSLog(@"======添加字段失败==%@",self.dataBase.lastErrorMessage);
+            }
+            [self.dataBase close];
+            
+        }
+        
+    }
+    return succeed;
+}
+
+/**
+ 删除表中已有的字段
+
+ @param column <#column description#>
+ @param table <#table description#>
+ @return <#return value description#>
+ */
+- (BOOL)deleteColumn:(NSString *)column FromTable:(NSString *)table{
+    BOOL succeed = NO;
+    if ([self.dataBase open]) {
+        
+        if ([self.dataBase columnExists:column inTableWithName:table]) {
+            
+            NSString *sql = [NSString stringWithFormat:@"ALTER TABLE %@ DROP COLUMN %@",table,column];
+            succeed = [self.dataBase executeUpdate:sql withArgumentsInArray:nil];
+            
+            if (!succeed) {
+                NSLog(@"======删除字段失败==%@",self.dataBase.lastErrorMessage);
+            }
+            [self.dataBase close];
+            
+        }else{
+            NSLog(@"======该字段不存在==");
+        }
+    }
+    return succeed;
+}
+
+/**
+ 修改已有字段的数据类型
+
+ @param column 将要被修改的字段
+ @param type 将要被修改成的数据类型
+ @param table 表名
+ @return <#return value description#>
+ */
+- (BOOL)changeColumnType:(NSString *)column type:(NSString *)type InTable:(NSString *)table{
+    BOOL succeed = NO;
+    if ([self.dataBase open]) {
+        
+        if ([self.dataBase columnExists:column inTableWithName:table]) {
+            
+            NSString *sql = [NSString stringWithFormat:@"ALTER TABLE %@ ALTER COLUMN %@ %@",table,column,type];
+            succeed = [self.dataBase executeUpdate:sql withArgumentsInArray:nil];
+            
+            if (!succeed) {
+                NSLog(@"======修改字段的数据类型失败==%@",self.dataBase.lastErrorMessage);
+            }
+            [self.dataBase close];
+            
+        }else{
+            NSLog(@"======该字段不存在==");
+        }
+        
     }
     return succeed;
 }

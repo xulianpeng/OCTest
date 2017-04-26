@@ -28,7 +28,11 @@
     }
     return self;
 }
-
+- (void)setXlpTimeoutInterval:(NSTimeInterval)xlpTimeoutInterval{
+    
+    _xlpTimeoutInterval = xlpTimeoutInterval;
+    self.manager.requestSerializer.timeoutInterval = _xlpTimeoutInterval;
+}
 - (void)Get:(NSString *)urlStr para:(NSDictionary *)para succeed:(XLPAFSuccessBlock)succeedBlock{
     
     [self.manager GET:urlStr parameters:para progress:^(NSProgress * _Nonnull downloadProgress) {
@@ -83,6 +87,47 @@
         
         
     }];
+}
+
+/**
+ 取消网络请求
+
+ @param url <#url description#>
+ */
+- (void)cancelOperationWithUrl:(NSURL *)url{
     
+    for (NSURLSessionTask *task in [XLPAFManager shared].manager.tasks) {
+        if ([task.originalRequest.URL.absoluteString containsString:url.absoluteString]) {
+            [task cancel];
+        }
+    }
+}
+
+/**
+ 挂起网络请求
+
+ @param url <#url description#>
+ */
+- (void)pauseOperationWithUrl:(NSURL *)url{
+    
+    for (NSURLSessionTask *task in [XLPAFManager shared].manager.tasks) {
+        if ([task.originalRequest.URL.absoluteString containsString:url.absoluteString]) {
+            [task suspend];
+        }
+    }
+}
+
+/**
+ 重新启用网络请求
+
+ @param url <#url description#>
+ */
+- (void)resumeOperationWithUrl:(NSURL *)url{
+    
+    for (NSURLSessionTask *task in [XLPAFManager shared].manager.tasks) {
+        if ([task.originalRequest.URL.absoluteString containsString:url.absoluteString]) {
+            [task resume];
+        }
+    }
 }
 @end

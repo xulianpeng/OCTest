@@ -72,7 +72,7 @@
     
 }
 
-+(void)showHudwithMessage:(NSString*)message andWhere:(UIView *)view byDuration:(float)duration
++(void)showHudwithMessage:(nullable NSString*)message andWhere:(nullable UIView *)view byDuration:(float)duration
 {
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
     hud.mode = MBProgressHUDModeText;

@@ -17,4 +17,5 @@
 + (void)kUDefaultsSetBool:(BOOL)value forkey:(nullable NSString *)key;
 + (nullable id)kUDefaultsValueForKey:(nullable NSString *)key;
 + (void)kUDefaultsRemoveObjectForKey:(nullable NSString *)key;
++ (void)showHudwithMessage:(nullable NSString *)message andWhere:(nullable UIView *)view byDuration:(float)duration;
 @end
