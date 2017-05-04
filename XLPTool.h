@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface XLPTool : NSObject
++ (nullable UIWindow *)kGetKeyWindow;
 + (nullable NSString *)kGetLibraryPath;
 + (nullable NSString *)kGetDocumentPath;
 + (nullable NSString *)kCreatFile:(nullable NSString *)name;
@@ -18,4 +19,6 @@
 + (nullable id)kUDefaultsValueForKey:(nullable NSString *)key;
 + (void)kUDefaultsRemoveObjectForKey:(nullable NSString *)key;
 + (void)showHudwithMessage:(nullable NSString *)message andWhere:(nullable UIView *)view byDuration:(float)duration;
++ (nullable UIColor *)colorWith16RGB:(int)rgbValue;
++ (BOOL)kIsPhoneNumber:(nullable NSString *)numStr;
 @end

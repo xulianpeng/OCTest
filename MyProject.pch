@@ -17,5 +17,9 @@
 #import "XLPDefine.h"
 #import "Masonry.h"
 #import  "XLPUIMake.h"
+#import "XLPUIMake.h"
 #import "UIControl+XLPControl.h"
+#import "UILabel+XLPLabelMaker.h"
+#import "UIButton+XLPButtonMaker.h"
+#import "UITextField+XLPTextFieldMaker.h"
 #endif /* MyProject_pch */

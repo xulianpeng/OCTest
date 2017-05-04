@@ -23,6 +23,7 @@
     
     self.window.rootViewController = rootVC;
     [self.window makeKeyAndVisible];
+    
     return YES;
 }
 

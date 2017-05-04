@@ -9,6 +9,11 @@
 #import "XLPTool.h"
 #import "MBProgressHud.h"
 @implementation XLPTool
+
++ (UIWindow *)kGetKeyWindow{
+    
+    return [UIApplication sharedApplication].keyWindow;
+}
 + (NSString *)kGetLibraryPath{
     
     return [NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES)lastObject];
@@ -81,5 +86,21 @@
     hud.label.textColor = [UIColor whiteColor];//改变字体颜色
     hud.removeFromSuperViewOnHide = YES;
     [hud hideAnimated:YES afterDelay:duration];
+}
+
++ (UIColor *)colorWith16RGB:(int)rgbValue{
+    
+    return [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16)) / 255.0
+                           green:((float)((rgbValue & 0xFF00) >> 8)) / 255.0
+                            blue:((float)(rgbValue & 0xFF)) / 255.0 alpha:1.0];
+}
++ (BOOL)kIsPhoneNumber:(nullable NSString *)numStr {
+    NSString * phoneNumber = @"^1[34578][0-9]{9}$";
+    NSPredicate *regextestpn = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", phoneNumber];
+    if ([regextestpn evaluateWithObject:numStr] == YES) {
+        return YES;
+    }else {
+        return NO;
+    }
 }
 @end
