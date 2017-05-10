@@ -50,6 +50,11 @@
     }];
     
     testButton.backgroundColor = [XLPTool colorWith16RGB:0x309D9A];
+    
+ 
+    
+    NSLog(@" ====啦啦啦啦 网址是否有效呢===%d",[XLPTool kIsUrl:@"https:// "]);
+    
 }
 
 - (void)didReceiveMemoryWarning {

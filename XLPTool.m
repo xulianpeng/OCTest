@@ -103,4 +103,14 @@
         return NO;
     }
 }
++ (BOOL)kIsUrl:(nullable NSString *)urlStr{
+    
+    NSString * phoneNumber = @"http(s)?://([\\w-]+\\.)+[\\w-]+(/[\\w- ./?%&=]*)?";
+    NSPredicate *regextestpn = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", phoneNumber];
+    if ([regextestpn evaluateWithObject:urlStr] == YES) {
+        return YES;
+    }else {
+        return NO;
+    }
+}
 @end
