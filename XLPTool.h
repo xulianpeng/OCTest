@@ -20,6 +20,7 @@
 + (void)kUDefaultsRemoveObjectForKey:(nullable NSString *)key;
 + (void)showHudwithMessage:(nullable NSString *)message andWhere:(nullable UIView *)view byDuration:(float)duration;
 + (nullable UIColor *)colorWith16RGB:(int)rgbValue;
++ (nullable UIColor *)colorRandom;
 + (BOOL)kIsPhoneNumber:(nullable NSString *)numStr;
 + (BOOL)kIsUrl:(nullable NSString *)urlStr;
 @end

@@ -94,6 +94,10 @@
                            green:((float)((rgbValue & 0xFF00) >> 8)) / 255.0
                             blue:((float)(rgbValue & 0xFF)) / 255.0 alpha:1.0];
 }
++ (nullable UIColor *)colorRandom{
+    
+    return [UIColor colorWithRed:arc4random()%256/255.0 green:arc4random()%256/255.0 blue:arc4random()%256/255.0 alpha:1.0];
+}
 + (BOOL)kIsPhoneNumber:(nullable NSString *)numStr {
     NSString * phoneNumber = @"^1[34578][0-9]{9}$";
     NSPredicate *regextestpn = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", phoneNumber];

@@ -14,9 +14,12 @@
 
 @implementation TestOneViewController
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    
+    
     UITextField *textfield = [UITextField xlp_textFieldWithPlaceholder:@"默认主window上的textfield" color:[UIColor redColor] font:14 superView:self.view constraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(30);
         make.top.mas_equalTo(70);
@@ -55,21 +58,106 @@
     
     NSLog(@" ====啦啦啦啦 网址是否有效呢===%d",[XLPTool kIsUrl:@"https:// "]);
     
+    //label  上下切换 切换间隔是 2s
+//    CGSize size = CGSizeMake(200, 40);
+
+    UIView *labelView = [[UIView alloc]initWithFrame:CGRectMake(100, 300, 200, 40)];
+    [self.view addSubview:labelView];
+    labelView.backgroundColor = [UIColor cyanColor];
+    
+//    UILabel *firstLabel = [[UILabel alloc]initWithFrame:CGRectMake(100, 300, labelView.frame.size.width, labelView.frame.size.height)];
+//    [self.view addSubview:firstLabel];
+//    firstLabel.text = @"我说123木头人我爱你";
+//    
+//    UILabel * twoLabel = [[UILabel alloc]initWithFrame:CGRectMake(100, 340, 200, 40)];
+//    [self.view addSubview:twoLabel];
+//    twoLabel.text = @"你说你爱了不该爱的人";
+//    twoLabel.alpha = 0.0;
+    
+    
+    UILabel *firstLabel = [UILabel xlp_labelWithText:@"啦啦啦啦啦我爱你" superView:self.view constraints:^(MASConstraintMaker *make) {
+        make.centerX.mas_equalTo(labelView.mas_centerX);
+        make.top.mas_equalTo(labelView.mas_top);
+        make.size.mas_equalTo(CGSizeMake(200, 40));
+        
+    }];
+    
+    UILabel *twoLabel = [UILabel xlp_labelWithText:@"你爱我我爱你啦啦啦啦啦我爱你" superView:self.view constraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(labelView.mas_bottom);
+        make.centerX.mas_equalTo(labelView.mas_centerX);
+        make.size.mas_equalTo(CGSizeMake(200, 40));
+        
+    }];
+    twoLabel.alpha = 0.0;
+    
+    NSMutableArray *arr = [NSMutableArray new];
+    [arr addObject:firstLabel];
+    [arr addObject:twoLabel];
+    
+    NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:2 repeats:YES block:^(NSTimer * _Nonnull timer) {
+        
+        UILabel *label1 = arr[0];
+        UILabel *label2 = arr[1];
+        [arr exchangeObjectAtIndex:0 withObjectAtIndex:1];
+        
+        
+        [UIView animateWithDuration:0.5 animations:^{
+            
+            [label1 mas_updateConstraints:^(MASConstraintMaker *make) {
+                make.top.mas_equalTo(labelView.mas_top).offset(-40);
+            }];
+            [self.view layoutIfNeeded];
+            label1.alpha = 0.0;
+        } completion:^(BOOL finished) {
+            
+            //这样写不是想要的结果
+//            [label1 mas_updateConstraints:^(MASConstraintMaker *make) {
+//                make.top.mas_equalTo(labelView.mas_bottom);
+//            }];
+            
+            [label1 mas_remakeConstraints:^(MASConstraintMaker *make) {
+                make.top.mas_equalTo(labelView.mas_bottom);
+                make.centerX.mas_equalTo(labelView.mas_centerX);
+                make.size.mas_equalTo(CGSizeMake(200, 40));
+            }];
+            [self.view layoutIfNeeded];
+
+        }];
+        
+        [UIView animateWithDuration:0.5 animations:^{
+            
+            label2.alpha = 1.0;
+            [label2 mas_updateConstraints:^(MASConstraintMaker *make) {
+                make.top.mas_equalTo(labelView.mas_top);
+            }];
+            [self.view layoutIfNeeded];
+        }];
+        
+        //第二种方法
+//        [UIView animateWithDuration:0.5 animations:^{
+//            
+//            label2.frame = CGRectMake(100, 300, 200, 40);
+//            label2.alpha = 1.0;
+//            
+//        }];
+//        
+//        [UIView animateWithDuration:0.5 animations:^{
+//            label1.frame = CGRectMake(100, 260, 200, 40);
+//            label1.alpha = 0.0;
+//        } completion:^(BOOL finished) {
+//            label1.frame = CGRectMake(100, 340, 200, 40);
+//
+//        }];
+    }];
+    
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

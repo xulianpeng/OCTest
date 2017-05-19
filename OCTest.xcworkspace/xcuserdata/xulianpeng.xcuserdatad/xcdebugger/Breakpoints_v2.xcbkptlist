@@ -26,13 +26,109 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "XLPTool.m"
-            timestampString = "516089287.098592"
+            timestampString = "516794470.838037"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "110"
-            endingLineNumber = "110"
+            startingLineNumber = "114"
+            endingLineNumber = "114"
             landmarkName = "+kIsUrl:"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "OCTest/TestOneViewController.m"
+            timestampString = "516865227.514982"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "114"
+            endingLineNumber = "114"
+            landmarkName = "-viewDidLoad"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__36-[TestOneViewController viewDidLoad]_block_invoke.123"
+                  moduleName = "OCTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xulianpeng/Desktop/GitHub/OCTest/OCTest/TestOneViewController.m"
+                  timestampString = "516864949.36063"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "113"
+                  endingLineNumber = "113"
+                  offsetFromSymbolStart = "52">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__36-[TestOneViewController viewDidLoad]_block_invoke_2.124"
+                  moduleName = "OCTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xulianpeng/Desktop/GitHub/OCTest/OCTest/TestOneViewController.m"
+                  timestampString = "516864949.363381"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "113"
+                  endingLineNumber = "113"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "OCTest/TestOneViewController.m"
+            timestampString = "516864988.855064"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "106"
+            endingLineNumber = "106"
+            landmarkName = "-viewDidLoad"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__36-[TestOneViewController viewDidLoad]_block_invoke_2.108"
+                  moduleName = "OCTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xulianpeng/Desktop/GitHub/OCTest/OCTest/TestOneViewController.m"
+                  timestampString = "516864989.066366"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "106"
+                  endingLineNumber = "106"
+                  offsetFromSymbolStart = "44">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__36-[TestOneViewController viewDidLoad]_block_invoke_3.109"
+                  moduleName = "OCTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xulianpeng/Desktop/GitHub/OCTest/OCTest/TestOneViewController.m"
+                  timestampString = "516864989.06792"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "106"
+                  endingLineNumber = "106"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
