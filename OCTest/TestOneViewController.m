@@ -9,7 +9,7 @@
 #import "TestOneViewController.h"
 
 @interface TestOneViewController ()
-
+@property(nonatomic,weak)NSTimer *timer;
 @end
 
 @implementation TestOneViewController
@@ -58,7 +58,10 @@
     
     NSLog(@" ====啦啦啦啦 网址是否有效呢===%d",[XLPTool kIsUrl:@"https:// "]);
     
-    //label  上下切换 切换间隔是 2s
+#pragma mark - 面试题1
+    /*************************面试题开始*************************************/
+
+    //面试题  label  上下切换 切换间隔是 2s
 //    CGSize size = CGSizeMake(200, 40);
 
     UIView *labelView = [[UIView alloc]initWithFrame:CGRectMake(100, 300, 200, 40)];
@@ -94,7 +97,7 @@
     [arr addObject:firstLabel];
     [arr addObject:twoLabel];
     
-    NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:2 repeats:YES block:^(NSTimer * _Nonnull timer) {
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:2 repeats:YES block:^(NSTimer * _Nonnull timer) {
         
         UILabel *label1 = arr[0];
         UILabel *label2 = arr[1];
@@ -127,6 +130,7 @@
         [UIView animateWithDuration:0.5 animations:^{
             
             label2.alpha = 1.0;
+            label2.backgroundColor = [XLPTool colorRandom];
             [label2 mas_updateConstraints:^(MASConstraintMaker *make) {
                 make.top.mas_equalTo(labelView.mas_top);
             }];
@@ -149,9 +153,16 @@
 //
 //        }];
     }];
+    /*************************面试题结束*************************************/
     
 }
 
+- (void)viewDidDisappear:(BOOL)animated{
+    [super viewDidDisappear:animated];
+    
+    [self.timer invalidate];
+    self.timer = nil;
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
