@@ -23,4 +23,5 @@
 + (nullable UIColor *)colorRandom;
 + (BOOL)kIsPhoneNumber:(nullable NSString *)numStr;
 + (BOOL)kIsUrl:(nullable NSString *)urlStr;
++ (nullable NSMutableString*)randomCreatChinese:(NSInteger)count;
 @end

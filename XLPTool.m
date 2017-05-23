@@ -117,4 +117,37 @@
         return NO;
     }
 }
+//随机生成指定个数的汉字
++ (NSMutableString*)randomCreatChinese:(NSInteger)count{
+    
+    NSMutableString *randomChineseString =@"".mutableCopy;
+    
+    for(NSInteger i =0; i < count; i++){
+        
+//        NSStringEncodinggbk Encoding = CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingGB_18030_2000);
+        
+        NSStringEncoding enc = CFStringConvertEncodingToNSStringEncoding (kCFStringEncodingGB_18030_2000);
+        //随机生成汉字高位
+        
+        NSInteger randomH =0xA1+arc4random()%(0xFE - 0xA1+1);
+        
+        //随机生成汉子低位
+        
+        NSInteger randomL =0xB0+arc4random()%(0xF7 - 0xB0+1);
+        
+        //组合生成随机汉字
+        
+        NSInteger number = (randomH << 8)+randomL;
+        
+        NSData*data = [NSData dataWithBytes:&number length:2];
+        
+        NSString*string = [[NSString alloc]initWithData:data encoding:enc];
+        
+        [randomChineseString appendString:string];
+        
+    }
+    
+    return randomChineseString;
+    
+}
 @end

@@ -78,7 +78,7 @@
 //    twoLabel.alpha = 0.0;
     
     
-    UILabel *firstLabel = [UILabel xlp_labelWithText:@"啦啦啦啦啦我爱你" superView:self.view constraints:^(MASConstraintMaker *make) {
+    UILabel *firstLabel = [UILabel xlp_labelWithText:[XLPTool randomCreatChinese:5] superView:self.view constraints:^(MASConstraintMaker *make) {
         make.centerX.mas_equalTo(labelView.mas_centerX);
         make.top.mas_equalTo(labelView.mas_top);
         make.size.mas_equalTo(CGSizeMake(200, 40));
