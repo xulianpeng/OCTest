@@ -7,8 +7,8 @@
 //
 
 #import "TestOneViewController.h"
-
-@interface TestOneViewController ()
+#import "UITextView+XLPTextView.h"
+@interface TestOneViewController ()<UITextViewDelegate>
 @property(nonatomic,weak)NSTimer *timer;
 @end
 
@@ -154,6 +154,27 @@
 //        }];
     }];
     /*************************面试题结束*************************************/
+    
+    /***********给textview添加预留字体属性验证****************/
+    
+    UITextView *aa = [[UITextView alloc]init];
+    [self.view addSubview:aa];
+    
+    [aa mas_makeConstraints:^(MASConstraintMaker *make) {
+        
+        make.top.mas_equalTo(labelView.mas_bottom).offset(30);
+        make.left.mas_equalTo(30);
+        make.right.mas_equalTo(-30);
+        make.height.mas_equalTo(100);
+    }];
+    aa.layer.borderColor = [UIColor purpleColor].CGColor;
+    aa.layer.borderWidth = 1;
+    aa.font = kFontWithSize(13);
+    aa.xlp_placeholder = @"请告诉我们您的宝贵建议..";
+    aa.delegate = self;
+    aa.returnKeyType = UIReturnKeyDone;
+    
+    
     
 }
 

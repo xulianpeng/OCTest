@@ -41,46 +41,12 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "OCTest/TestOneViewController.m"
-            timestampString = "516865669.041637"
+            filePath = "UITextView+XLPTextView.m"
+            timestampString = "518510008.319905"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "117"
-            endingLineNumber = "117"
-            landmarkName = "-viewDidLoad"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__36-[TestOneViewController viewDidLoad]_block_invoke.123"
-                  moduleName = "OCTest"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/xulianpeng/Desktop/GitHub/OCTest/OCTest/TestOneViewController.m"
-                  timestampString = "516864949.36063"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "113"
-                  endingLineNumber = "113"
-                  offsetFromSymbolStart = "52">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__36-[TestOneViewController viewDidLoad]_block_invoke_2.124"
-                  moduleName = "OCTest"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/xulianpeng/Desktop/GitHub/OCTest/OCTest/TestOneViewController.m"
-                  timestampString = "516864949.363381"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "113"
-                  endingLineNumber = "113"
-                  offsetFromSymbolStart = "16">
-               </Location>
-            </Locations>
+            startingLineNumber = "23"
+            endingLineNumber = "23">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -89,46 +55,44 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "OCTest/TestOneViewController.m"
-            timestampString = "516865669.041637"
+            filePath = "UITextView+XLPTextView.m"
+            timestampString = "518510009.11472"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "109"
-            endingLineNumber = "109"
-            landmarkName = "-viewDidLoad"
+            startingLineNumber = "17"
+            endingLineNumber = "17">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UITextView+XLPTextView.m"
+            timestampString = "518510042.798195"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "-xlp_placeholderLabel"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__36-[TestOneViewController viewDidLoad]_block_invoke_2.108"
-                  moduleName = "OCTest"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/xulianpeng/Desktop/GitHub/OCTest/OCTest/TestOneViewController.m"
-                  timestampString = "516864989.066366"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "106"
-                  endingLineNumber = "106"
-                  offsetFromSymbolStart = "44">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__36-[TestOneViewController viewDidLoad]_block_invoke_3.109"
-                  moduleName = "OCTest"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/xulianpeng/Desktop/GitHub/OCTest/OCTest/TestOneViewController.m"
-                  timestampString = "516864989.06792"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "106"
-                  endingLineNumber = "106"
-                  offsetFromSymbolStart = "16">
-               </Location>
-            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UITextView+XLPTextView.m"
+            timestampString = "518510474.561179"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "-xlp_placeholderLabel"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
