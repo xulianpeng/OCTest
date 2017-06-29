@@ -340,6 +340,24 @@
     
 }
 
+- (NSString *)printStrWithNumber:(NSInteger)number{
+    
+    NSMutableString *str;
+    
+    for (NSInteger i = number; i > 0; i--) {
+        
+        NSString *theStr = [NSString stringWithFormat:@"%ld",i];
+        
+        [str appendString:theStr];
+        
+    }
+    
+    
+    
+    return str;
+    
+}
+
 - (void)viewDidDisappear:(BOOL)animated{
     [super viewDidDisappear:animated];
     
