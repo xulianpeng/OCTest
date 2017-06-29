@@ -883,7 +883,7 @@
  *  不管请求失败多少次，只需要创建一次，然后其他的调用失败，只需要做显示与隐藏操作
  *
  *  @param superView 添加约束需要，生成的view会自动与占满superView
- *  @param imgName    显示的图片的名称或者图片对象
+ *  @param image  显示的图片的名称或者图片对象
  *  @param tip        请求失败的提示语
  *  @param callback   点击界面时的回调
  *

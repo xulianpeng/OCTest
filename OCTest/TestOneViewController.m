@@ -174,6 +174,168 @@
     aa.delegate = self;
     aa.returnKeyType = UIReturnKeyDone;
     
+  
+    //冒泡排序
+//    [self maopaoSort];
+    
+    //快速排序
+//    NSMutableArray *list =  [NSMutableArray arrayWithObjects:@"6",@"1",@"2",@"7",@"9",@"3",@"4",@"5",@"10",@"8", nil];
+//    NSInteger low = 0;
+//    NSInteger high = list.count - 1;
+//    [self quickSort:list startIndex:low endIndex:high];
+    
+//    [self quickSortFromLeft:low toRight:high arr:list];
+    
+    //插入排序
+    
+    
+    
+//    NSLog(@"=====%@",list);
+    
+    //输出乘法口诀 9*9
+    [self printChengfaKoujue];
+
+    
+}
+
+- (void)maopaoSort{
+    
+    NSMutableArray *arr =  [NSMutableArray arrayWithObjects:@"9",@"4",@"5",@"3",@"2",@"7",@"8",@"1",@"0",@"6", nil];
+    
+    for (int i = 0; i < arr.count; i++) {
+        
+        for (int j = 0; j < arr.count - 1; j++) {
+            
+            if ([arr[j] intValue] > [arr[j + 1] intValue]) {
+                
+                [arr exchangeObjectAtIndex:j withObjectAtIndex:j + 1]; //升序排列
+                NSLog(@"最终的排列结果为%@",arr);
+
+            }else{
+                
+                
+                
+            }
+            
+        }
+        
+    }
+    
+    NSLog(@"最终的排列结果为%@",arr);
+}
+
+
+-(void)quickSort:(NSMutableArray *)list startIndex:(NSInteger)start endIndex:(NSInteger)end
+{
+    
+    if (start >= end) {
+        return;
+    }
+    
+    NSInteger low = start; //哨兵1
+    NSInteger high = end; //哨兵2
+    NSInteger key = [list[start]integerValue]; //关键值 key
+    
+    
+    
+    //从后往前  哨兵2  找到第一个比关键值 小的 数 哨兵2--
+    
+    //从前往后 哨兵1 找到第一个 比关键值大的 数 哨兵1++
+    
+    //若 哨兵1 < 哨兵2 两者交换  否则相遇 偶数 则 关键值 直接插入 哨兵1 2之间 , 单数 则分 大于关键值 则关键值放在该值前面  否则 关键值放在其后面 ,然后 数组 被 关键值 分为 2部分   关键值 前面是 数组1  ,后面为 数组2
+    
+    //然后 数组1 数组2  重复之前的操作
+    
+    
+    while (low < high) {
+        
+        while ([list[high] integerValue] >= key &&  low < high && high > 0  ) {
+            
+            high--;
+            
+            NSLog(@"输出high===%ld",(long)high);
+        }
+        
+        while ([list[low]integerValue] <= key && low < high) {
+            low++;
+            NSLog(@"输出high===%ld",(long)(low + 1));
+
+        }
+        
+        if (low < high) {
+            
+            [list exchangeObjectAtIndex:low withObjectAtIndex:high];
+            NSLog(@"======交换结果为\n %@",list);
+        }
+        
+        
+    }
+    
+    //基准数 与 high位置调换
+    [list exchangeObjectAtIndex:start withObjectAtIndex:high];
+    
+    //数组 以基准数字 分为2部分 二分法
+        
+    [self quickSort:list startIndex:start endIndex:low-1]; //递归调用
+    
+    [self quickSort:list startIndex:low+1 endIndex:end]; //递归调用
+    
+    //重点理解递归调用的妙处 和 顺序执行的本质
+    NSLog(@"啦啦啦啦");
+    
+    
+}
+
+- (void) quickSortFromLeft:(NSInteger)leftIndex toRight:(NSInteger)rightIndex  arr:(NSMutableArray *)listArr {
+    
+    if (leftIndex >= rightIndex) {
+        return;
+    }
+    
+    NSInteger i = leftIndex;
+    NSInteger j = rightIndex;
+    NSInteger base = [listArr[leftIndex] integerValue];
+    
+    
+    while (i != j) {
+        while ([listArr[j] integerValue] >= base && i < j) {
+            j --;
+        }
+        while ([listArr[i] integerValue] <= base && i < j) {
+            i ++;
+        }
+        
+        if (i < j) {
+            NSInteger temp = [listArr[j] integerValue];
+            listArr[j] = listArr[i];
+            listArr[i] = [NSNumber numberWithInteger:temp];
+            
+        }
+    }
+    
+    NSInteger temp = [listArr[j] integerValue];
+    listArr[j] = [NSNumber numberWithInteger:base];
+    listArr[leftIndex] = [NSNumber numberWithInteger:temp];
+    
+    
+    [self quickSortFromLeft:leftIndex toRight:i-1 arr:listArr];
+    [self quickSortFromLeft:i+1 toRight:rightIndex arr:listArr];
+    
+    
+    
+}
+
+- (void)printChengfaKoujue{
+    
+    //输出乘法口诀
+    
+    for (int i = 1; i<= 9; i++) {
+        
+        for (int j = i; j<=9; j++) {
+            
+            NSLog(@"%d *  %d = %d \n",i,j,i * j);
+        }
+    }
     
     
 }

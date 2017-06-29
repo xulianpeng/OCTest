@@ -156,6 +156,7 @@
 		07E37D681EAED91D005EA505 = {
 			isa = PBXGroup;
 			children = (
+				898B532A1EF147F9001805D5 /* CTest */,
 				07E37DAB1EAED94F005EA505 /* Base */,
 				07E37DAA1EAED945005EA505 /* Lib */,
 				07E37D731EAED91D005EA505 /* OCTest */,
@@ -261,6 +262,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		898B532A1EF147F9001805D5 /* CTest */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = CTest;
+			sourceTree = "<group>";
+		};
 		8AD0898594F261CB088D8E9B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -340,6 +348,7 @@
 				TargetAttributes = {
 					07E37D701EAED91D005EA505 = {
 						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = 5SW94Y3RSA;
 						ProvisioningStyle = Automatic;
 					};
 					07E37D8C1EAED91D005EA505 = {
@@ -622,6 +631,7 @@
 			baseConfigurationReference = DC43A6650D8C16127035A560 /* Pods-OCTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5SW94Y3RSA;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/MyProject.pch";
 				INFOPLIST_FILE = OCTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -635,6 +645,7 @@
 			baseConfigurationReference = 6B6124D1092C9422038546FB /* Pods-OCTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5SW94Y3RSA;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/MyProject.pch";
 				INFOPLIST_FILE = OCTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
