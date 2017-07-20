@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+typedef NS_ENUM(NSUInteger, MyState) {
+    xlpman,
+    xlpWomen,
+    xlpchildren,
+};
 @interface RootTabBarController : UITabBarController
 
 @end

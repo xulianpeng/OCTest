@@ -22,4 +22,6 @@
 #import "UILabel+XLPLabelMaker.h"
 #import "UIButton+XLPButtonMaker.h"
 #import "UITextField+XLPTextFieldMaker.h"
+
+#import "XLPAFManager.h"
 #endif /* MyProject_pch */

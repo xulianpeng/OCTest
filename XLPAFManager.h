@@ -12,9 +12,9 @@
 @property(nonatomic,strong)AFHTTPSessionManager *manager;
 @property(nonatomic,assign)NSTimeInterval xlpTimeoutInterval;
 + (XLPAFManager *)shared;
-//- (void)Get:(NSString *)urlStr para:(NSDictionary *)para finished:(XLPAFDoneBlock)finishBlock;
-//- (void)POST:(NSString *)urlStr para:(NSDictionary *)para finished:(XLPAFDoneBlock)finishBlock;
-//- (void)Get:(NSString *)urlStr para:(NSDictionary *)para succeed:(XLPAFSuccessBlock)succeedBlock;
-//- (void)POST:(NSString *)urlStr para:(NSDictionary *)para succeed:(XLPAFSuccessBlock)succeedBlock;
+- (void)Get:(NSString *)urlStr para:(NSDictionary *)para finished:(XLPAFDoneBlock)finishBlock;
+- (void)POST:(NSString *)urlStr para:(NSDictionary *)para finished:(XLPAFDoneBlock)finishBlock;
+- (void)Get:(NSString *)urlStr para:(NSDictionary *)para succeed:(XLPAFSuccessBlock)succeedBlock;
+- (void)POST:(NSString *)urlStr para:(NSDictionary *)para succeed:(XLPAFSuccessBlock)succeedBlock;
 
 @end

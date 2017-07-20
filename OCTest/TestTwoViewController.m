@@ -7,7 +7,8 @@
 //
 
 #import "TestTwoViewController.h"
-
+#import "NSString+XLPStringMaker.h"
+#import "Person_CallMyName.h"
 @interface TestTwoViewController ()
 
 @end
@@ -17,7 +18,22 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    [[XLPAFManager shared]Get:@"www.baidu.com" para:nil succeed:^(id responseObject) {
+       
+        NSLog(@"lalalla");
+    }];
+    
+    NSString *testStr = @"我是大帅哥啦啦啦";
+    NSLog(@"朗格里朗===%ld",(long)[testStr obtainLength]);
+    
+    [Person callMyName];
+    Person *thePerson = [[Person alloc]init];
+    [thePerson callMyFirstName];
+    [thePerson callMySecondName];
+    
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

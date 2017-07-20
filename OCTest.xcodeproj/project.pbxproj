@@ -30,7 +30,8 @@
 		07E37D921EAED91D005EA505 /* OCTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E37D911EAED91D005EA505 /* OCTestTests.m */; };
 		07E37D9D1EAED91E005EA505 /* OCTestUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E37D9C1EAED91E005EA505 /* OCTestUITests.m */; };
 		894C611D1EE7DC5100603D78 /* UITextView+XLPTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 894C611C1EE7DC5100603D78 /* UITextView+XLPTextView.m */; };
-		895821911EC2B8B70060EA6D /* NSString+XLPStringMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 895821901EC2B8B70060EA6D /* NSString+XLPStringMaker.m */; };
+		89A3D1BE1F1A1A0A00EACCAC /* NSString+XLPStringMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A3D1BD1F1A1A0A00EACCAC /* NSString+XLPStringMaker.m */; };
+		89A3D1C21F1CC5CC00EACCAC /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A3D1C11F1CC5CC00EACCAC /* Person.m */; };
 		9762FC7B4DB27A77CC4B9B4E /* libPods-OCTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D65EBBB68E69596EB8A03B01 /* libPods-OCTest.a */; };
 /* End PBXBuildFile section */
 
@@ -100,8 +101,11 @@
 		6B6124D1092C9422038546FB /* Pods-OCTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-OCTest/Pods-OCTest.release.xcconfig"; sourceTree = "<group>"; };
 		894C611B1EE7DC5100603D78 /* UITextView+XLPTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+XLPTextView.h"; sourceTree = "<group>"; };
 		894C611C1EE7DC5100603D78 /* UITextView+XLPTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+XLPTextView.m"; sourceTree = "<group>"; };
-		8958218F1EC2B8B70060EA6D /* NSString+XLPStringMaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+XLPStringMaker.h"; sourceTree = "<group>"; };
-		895821901EC2B8B70060EA6D /* NSString+XLPStringMaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+XLPStringMaker.m"; sourceTree = "<group>"; };
+		89A3D1BC1F1A1A0A00EACCAC /* NSString+XLPStringMaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+XLPStringMaker.h"; sourceTree = "<group>"; };
+		89A3D1BD1F1A1A0A00EACCAC /* NSString+XLPStringMaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+XLPStringMaker.m"; sourceTree = "<group>"; };
+		89A3D1C01F1CC5CC00EACCAC /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		89A3D1C11F1CC5CC00EACCAC /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		89A3D1C31F1CC60200EACCAC /* Person_CallMyName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person_CallMyName.h; sourceTree = "<group>"; };
 		D65EBBB68E69596EB8A03B01 /* libPods-OCTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OCTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC43A6650D8C16127035A560 /* Pods-OCTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OCTest/Pods-OCTest.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -147,8 +151,11 @@
 				07D9DF381EAF189C00F07715 /* UIButton+XLPButtonMaker.m */,
 				07D9DF441EB0888A00F07715 /* UITextField+XLPTextFieldMaker.h */,
 				07D9DF451EB0888A00F07715 /* UITextField+XLPTextFieldMaker.m */,
-				8958218F1EC2B8B70060EA6D /* NSString+XLPStringMaker.h */,
-				895821901EC2B8B70060EA6D /* NSString+XLPStringMaker.m */,
+				89A3D1BC1F1A1A0A00EACCAC /* NSString+XLPStringMaker.h */,
+				89A3D1BD1F1A1A0A00EACCAC /* NSString+XLPStringMaker.m */,
+				89A3D1C01F1CC5CC00EACCAC /* Person.h */,
+				89A3D1C11F1CC5CC00EACCAC /* Person.m */,
+				89A3D1C31F1CC60200EACCAC /* Person_CallMyName.h */,
 			);
 			name = XLPUIKit;
 			sourceTree = "<group>";
@@ -465,6 +472,8 @@
 			files = (
 				07D9DF191EAEED3900F07715 /* XLPBaseVController.m in Sources */,
 				07D9DF3C1EAF1E2400F07715 /* XLPUIMake.m in Sources */,
+				89A3D1C21F1CC5CC00EACCAC /* Person.m in Sources */,
+				89A3D1BE1F1A1A0A00EACCAC /* NSString+XLPStringMaker.m in Sources */,
 				07E37D821EAED91D005EA505 /* OCTest.xcdatamodeld in Sources */,
 				07D9DF2B1EAEF9DF00F07715 /* XLPTool.m in Sources */,
 				07E37D791EAED91D005EA505 /* AppDelegate.m in Sources */,
@@ -474,7 +483,6 @@
 				07D9DF391EAF189C00F07715 /* UIButton+XLPButtonMaker.m in Sources */,
 				07D9DF1C1EAEED8200F07715 /* XLPBaseNavigationVController.m in Sources */,
 				894C611D1EE7DC5100603D78 /* UITextView+XLPTextView.m in Sources */,
-				895821911EC2B8B70060EA6D /* NSString+XLPStringMaker.m in Sources */,
 				07E37D761EAED91D005EA505 /* main.m in Sources */,
 				07D9DF461EB0888A00F07715 /* UITextField+XLPTextFieldMaker.m in Sources */,
 				07D9DF311EAEFDD000F07715 /* FMDBManager.m in Sources */,
