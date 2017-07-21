@@ -194,6 +194,45 @@
     
     //输出乘法口诀 9*9
     [self printChengfaKoujue];
+    
+    int a = 200;  //创建一个局部变量 a 并初始化为 200
+//    __block int a = 200;
+    void (^myTestBlock)(void) = ^(void){
+        
+        NSLog(@"======到底是什么鬼啊===%d",a);//输出1
+    }; //创建一个 栈区 block
+    a ++;
+    NSLog(@"到底是什么鬼啊===%d",a);//输出2
+    myTestBlock();  //调用前面创建的 block
+    
+    // 之前一直错误的认为 每次运行的结果是 输出2 输出1 输出1 把block回调和异步操作搞混了
+    
+//运行结果是  输出2 a = 201  输出1 a= 200 ->因为创建block时已经自动捕获变量a 而此时a=200
+//运行结果是 __block修饰后  输出2 a = 201  输出1 a= 201
+    
+    
+    
+    dispatch_queue_t seriealQueue = dispatch_queue_create("seriealQueue", DISPATCH_QUEUE_SERIAL);
+    
+    dispatch_queue_t currentQueue = dispatch_queue_create("currentQueue", DISPATCH_QUEUE_CONCURRENT);
+    
+    dispatch_async(seriealQueue, ^{
+        
+        NSLog(@"我是异步串行");
+    }) ;
+    dispatch_async(currentQueue, ^{
+        
+        NSLog(@"我是异步并行");
+    }) ;
+    
+    dispatch_sync(seriealQueue, ^{
+        NSLog(@"我是同步串行");
+
+    });
+    dispatch_sync(currentQueue, ^{
+        NSLog(@"我是同步并行");
+        
+    });
 
     
 }
