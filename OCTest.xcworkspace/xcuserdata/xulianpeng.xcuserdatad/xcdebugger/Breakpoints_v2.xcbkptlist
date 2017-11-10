@@ -121,8 +121,8 @@
                   symbolName = "-[TestTwoViewController viewDidLoad]"
                   moduleName = "OCTest"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/xulianpeng/Desktop/GitHub/OCTest/OCTest/TestTwoViewController.m"
-                  timestampString = "522319142.454015"
+                  urlString = "file:///Users/xulianpeng/Desktop/github/OCTest/OCTest/TestTwoViewController.m"
+                  timestampString = "530520811.415244"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "22"
@@ -136,8 +136,8 @@
                   symbolName = "__36-[TestTwoViewController viewDidLoad]_block_invoke"
                   moduleName = "OCTest"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/xulianpeng/Desktop/GitHub/OCTest/OCTest/TestTwoViewController.m"
-                  timestampString = "522319142.459239"
+                  urlString = "file:///Users/xulianpeng/Desktop/github/OCTest/OCTest/TestTwoViewController.m"
+                  timestampString = "530520811.424878"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "24"
@@ -177,38 +177,6 @@
             endingLineNumber = "15"
             landmarkName = "+shared"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "+[XLPAFManager shared]"
-                  moduleName = "OCTest"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/xulianpeng/Desktop/GitHub/OCTest/XLPAFManager.m"
-                  timestampString = "522319142.470038"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "17"
-                  endingLineNumber = "17"
-                  offsetFromSymbolStart = "34">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__22+[XLPAFManager shared]_block_invoke"
-                  moduleName = "OCTest"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/xulianpeng/Desktop/GitHub/OCTest/XLPAFManager.m"
-                  timestampString = "522319142.471967"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "18"
-                  endingLineNumber = "18"
-                  offsetFromSymbolStart = "16">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy

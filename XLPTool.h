@@ -18,10 +18,12 @@
 + (void)kUDefaultsSetBool:(BOOL)value forkey:(nullable NSString *)key;
 + (nullable id)kUDefaultsValueForKey:(nullable NSString *)key;
 + (void)kUDefaultsRemoveObjectForKey:(nullable NSString *)key;
-+ (void)showHudwithMessage:(nullable NSString *)message andWhere:(nullable UIView *)view byDuration:(float)duration;
++ (void)showHudwithMsessage:(nullable NSString *)message andWhere:(nullable UIView *)view byDuration:(float)duration;
 + (nullable UIColor *)colorWith16RGB:(int)rgbValue;
 + (nullable UIColor *)colorRandom;
 + (BOOL)kIsPhoneNumber:(nullable NSString *)numStr;
 + (BOOL)kIsUrl:(nullable NSString *)urlStr;
 + (nullable NSMutableString*)randomCreatChinese:(NSInteger)count;
++ (nullable NSString*)kObtainDeviceVersion;//获取设备型号
+
 @end

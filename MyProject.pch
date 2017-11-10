@@ -24,4 +24,5 @@
 #import "UITextField+XLPTextFieldMaker.h"
 
 #import "XLPAFManager.h"
+#import "MLeaksFinder.h"
 #endif /* MyProject_pch */
