@@ -20,12 +20,6 @@ PODS:
   - FMDB/standard (2.6.2)
   - Masonry (1.0.2)
   - MBProgressHUD (1.0.0)
-  - Meiqia (3.4.3):
-    - Meiqia/MeiqiaSDK (= 3.4.3)
-    - Meiqia/MQChatViewController (= 3.4.3)
-  - Meiqia/MeiqiaSDK (3.4.3)
-  - Meiqia/MQChatViewController (3.4.3):
-    - Meiqia/MeiqiaSDK
   - MLeaksFinder (1.0.0):
     - FBRetainCycleDetector
   - SDWebImage (4.0.0):
@@ -37,7 +31,6 @@ DEPENDENCIES:
   - FMDB (~> 2.6.2)
   - Masonry (~> 1.0.2)
   - MBProgressHUD (~> 1.0.0)
-  - Meiqia (~> 3.4.3)
   - MLeaksFinder
   - SDWebImage (~> 4.0.0)
 
@@ -47,10 +40,9 @@ SPEC CHECKSUMS:
   FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
-  Meiqia: ae7aed037c68de44e21b881b862c53e8d20df47f
   MLeaksFinder: 8c435bd2f6d070af18cff082b503b21adc130fc0
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
 
-PODFILE CHECKSUM: ea9ec353434b6399aec25ccffc9306bb8c308147
+PODFILE CHECKSUM: d058a45282d89e8b5f74624620f5e0093dcba8b7
 
 COCOAPODS: 1.3.1
