@@ -7,31 +7,39 @@
 //
 
 #import "TestThreeViewController.h"
-
+#import "OneViewController.h"
 @interface TestThreeViewController ()
-
+{
+    UIButton *bt;
+}
 @end
 
 @implementation TestThreeViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-}
 
+    
+    
+    bt = [UIButton buttonWithType:UIButtonTypeCustom];
+    bt.frame = CGRectMake(100, 200, 100, 40);
+    [self.view addSubview:bt];
+    [bt setTitle:@"跳  转" forState:UIControlStateNormal];
+    [bt addTarget:self action:@selector(pushHandle) forControlEvents:UIControlEventTouchUpInside];
+    bt.backgroundColor = [UIColor cyanColor];
+    
+    
+    
+}
+- (void)pushHandle{
+    OneViewController *oneVC = [OneViewController new];
+    [self.navigationController pushViewController:oneVC animated:true];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
