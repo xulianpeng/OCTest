@@ -9,8 +9,12 @@
 #import "TestTwoViewController.h"
 #import "NSString+XLPStringMaker.h"
 #import "Person_CallMyName.h"
-@interface TestTwoViewController ()
 
+#import "AAAViewController.h"
+@interface TestTwoViewController ()
+{
+    UIButton *bt;
+}
 @end
 
 @implementation TestTwoViewController
@@ -32,8 +36,20 @@
     [thePerson callMyFirstName];
     [thePerson callMySecondName];
     
+    
+    bt = [UIButton buttonWithType:UIButtonTypeCustom];
+    bt.frame = CGRectMake(100, 200, 100, 40);
+    [self.view addSubview:bt];
+    [bt setTitle:@"跳  转" forState:UIControlStateNormal];
+    [bt addTarget:self action:@selector(pushHandle) forControlEvents:UIControlEventTouchUpInside];
+    bt.backgroundColor = [UIColor cyanColor];
+    
 }
-
+- (void)pushHandle{
+    AAAViewController *oneVC = [AAAViewController new];
+    oneVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:oneVC animated:true];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -32,6 +32,7 @@
 		894C611D1EE7DC5100603D78 /* UITextView+XLPTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 894C611C1EE7DC5100603D78 /* UITextView+XLPTextView.m */; };
 		89A3D1BE1F1A1A0A00EACCAC /* NSString+XLPStringMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A3D1BD1F1A1A0A00EACCAC /* NSString+XLPStringMaker.m */; };
 		89A3D1C21F1CC5CC00EACCAC /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A3D1C11F1CC5CC00EACCAC /* Person.m */; };
+		89D0FD4D2019DABF00681C15 /* AAAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D0FD4C2019DABF00681C15 /* AAAViewController.m */; };
 		89F803BE1FFF2BEE00B9BD01 /* OneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89F803BD1FFF2BEE00B9BD01 /* OneViewController.m */; };
 		89F803C11FFF2BF800B9BD01 /* TwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89F803C01FFF2BF800B9BD01 /* TwoViewController.m */; };
 		89F803C41FFF80AF00B9BD01 /* XlpCountDownView.m in Sources */ = {isa = PBXBuildFile; fileRef = 89F803C31FFF80AF00B9BD01 /* XlpCountDownView.m */; };
@@ -109,6 +110,8 @@
 		89A3D1C01F1CC5CC00EACCAC /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
 		89A3D1C11F1CC5CC00EACCAC /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		89A3D1C31F1CC60200EACCAC /* Person_CallMyName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person_CallMyName.h; sourceTree = "<group>"; };
+		89D0FD4B2019DABF00681C15 /* AAAViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AAAViewController.h; sourceTree = "<group>"; };
+		89D0FD4C2019DABF00681C15 /* AAAViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AAAViewController.m; sourceTree = "<group>"; };
 		89F803BC1FFF2BEE00B9BD01 /* OneViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OneViewController.h; sourceTree = "<group>"; };
 		89F803BD1FFF2BEE00B9BD01 /* OneViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OneViewController.m; sourceTree = "<group>"; };
 		89F803BF1FFF2BF800B9BD01 /* TwoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TwoViewController.h; sourceTree = "<group>"; };
@@ -207,6 +210,7 @@
 				07D9DF241EAEEE7800F07715 /* TestTwoViewController.m */,
 				07D9DF261EAEEE8700F07715 /* TestThreeViewController.h */,
 				07D9DF271EAEEE8700F07715 /* TestThreeViewController.m */,
+				89D0FD472019D8B600681C15 /* TwoGroup */,
 				89F803BB1FFF2BC100B9BD01 /* Third */,
 				07E37D7D1EAED91D005EA505 /* Main.storyboard */,
 				07E37D831EAED91D005EA505 /* Assets.xcassets */,
@@ -284,6 +288,15 @@
 			children = (
 			);
 			name = CTest;
+			sourceTree = "<group>";
+		};
+		89D0FD472019D8B600681C15 /* TwoGroup */ = {
+			isa = PBXGroup;
+			children = (
+				89D0FD4B2019DABF00681C15 /* AAAViewController.h */,
+				89D0FD4C2019DABF00681C15 /* AAAViewController.m */,
+			);
+			path = TwoGroup;
 			sourceTree = "<group>";
 		};
 		89F803BB1FFF2BC100B9BD01 /* Third */ = {
@@ -517,6 +530,7 @@
 				07D9DF1C1EAEED8200F07715 /* XLPBaseNavigationVController.m in Sources */,
 				89F803BE1FFF2BEE00B9BD01 /* OneViewController.m in Sources */,
 				894C611D1EE7DC5100603D78 /* UITextView+XLPTextView.m in Sources */,
+				89D0FD4D2019DABF00681C15 /* AAAViewController.m in Sources */,
 				07E37D761EAED91D005EA505 /* main.m in Sources */,
 				07D9DF461EB0888A00F07715 /* UITextField+XLPTextFieldMaker.m in Sources */,
 				07D9DF311EAEFDD000F07715 /* FMDBManager.m in Sources */,
