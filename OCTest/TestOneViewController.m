@@ -27,7 +27,7 @@
 
     }];
     
-    UIButton * testButton =  [UIButton xlp_buttonWithTitle:@"window测试" superView:self.view constraints:^(MASConstraintMaker *make) {
+    UIButton * testButton =  [UIButton xlp_buttonWithTitle:@"window测试分支合并测试" superView:self.view constraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(50);
         make.top.mas_equalTo(100);
         make.size.mas_equalTo(CGSizeMake(100, 50));
