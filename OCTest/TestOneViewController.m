@@ -163,14 +163,14 @@
     [aa mas_makeConstraints:^(MASConstraintMaker *make) {
         
         make.top.mas_equalTo(labelView.mas_bottom).offset(30);
-        make.left.mas_equalTo(30);
+        make.left.mas_equalTo(40);
         make.right.mas_equalTo(-30);
         make.height.mas_equalTo(100);
     }];
     aa.layer.borderColor = [UIColor purpleColor].CGColor;
     aa.layer.borderWidth = 1;
     aa.font = kFontWithSize(13);
-    aa.xlp_placeholder = @"请告诉我们您的宝贵建议..";
+    aa.xlp_placeholder = @"请告诉我们您的宝贵建议,十分感谢你的反馈..";
     aa.delegate = self;
     aa.returnKeyType = UIReturnKeyDone;
     
