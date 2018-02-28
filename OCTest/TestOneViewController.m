@@ -170,7 +170,7 @@
     aa.layer.borderColor = [UIColor purpleColor].CGColor;
     aa.layer.borderWidth = 1;
     aa.font = kFontWithSize(13);
-    aa.xlp_placeholder = @"请告诉我们您的宝贵建议,十分感谢你的反馈..分支2测试啦啦啦";
+    aa.xlp_placeholder = @"请告诉我们您的宝贵建议,十分感谢你的反馈..分支2测试啦啦啦,分支4测试啦啦啦";
     aa.delegate = self;
     aa.returnKeyType = UIReturnKeyDone;
     
