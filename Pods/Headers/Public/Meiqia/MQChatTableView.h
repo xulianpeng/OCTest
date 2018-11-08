@@ -1,1 +1,1 @@
-../../../Meiqia/Meiqia-SDK-files/MQChatViewController/Views/MQChatTableView.h
+../../../Meiqia/Meiqia-SDK-files/MQChatViewController/Controllers/MQChatTableView.h

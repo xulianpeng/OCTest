@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0700"
+   LastUpgradeVersion = "0930"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -13,11 +13,11 @@
             buildForProfiling = "YES"
             buildForArchiving = "YES">
             <BuildableReference
-               BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '0BE3B102A1A5087F8E0C905296C2A08F'
-               BlueprintName = 'Meiqia'
-               ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'libMeiqia.a'>
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "81D9DA00B5CA7447EA2C16E74DA76361"
+               BlueprintName = "Meiqia"
+               ReferencedContainer = "container:Pods.xcodeproj"
+               BuildableName = "libMeiqia.a">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

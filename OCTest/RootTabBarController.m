@@ -10,8 +10,7 @@
 #import "TestOneViewController.h"
 #import "TestTwoViewController.h"
 #import "TestThreeViewController.h"
-#import <MeiQiaSDK/MeiqiaSDK.h>
-#import "MQChatViewManager.h"
+
 
 @interface RootTabBarController ()
 

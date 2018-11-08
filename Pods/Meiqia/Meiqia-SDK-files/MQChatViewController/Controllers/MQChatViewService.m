@@ -125,6 +125,7 @@ static NSInteger const kMQChatGetHistoryMessageNumber = 20;
     [MQManager removeStateChangeObserverWithKey:@"MQChatViewService"];
 }
 
+//从后台返回到前台时 
 - (void)backFromBackground {
     if ([MQServiceToViewInterface waitingInQueuePosition] > 0) {
         [self setClientOnline];
@@ -139,7 +140,6 @@ static NSInteger const kMQChatGetHistoryMessageNumber = 20;
 - (void)addCellModelAndReloadTableViewWithModel:(id<MQCellModelProtocol>)cellModel {
     [self.cellModels addObject:cellModel];
     [self.delegate insertCellAtBottomForModelCount: 1];
-//    [self reloadChatTableView];
 }
 
 /**
@@ -169,7 +169,7 @@ static NSInteger const kMQChatGetHistoryMessageNumber = 20;
 - (NSDate *)getFirstServiceCellModelDate {
     for (NSInteger index = 0; index < self.cellModels.count; index++) {
         id<MQCellModelProtocol> cellModel = [self.cellModels objectAtIndex:index];
-#pragma 开发者可在下面添加自己更多的业务cellModel，以便能正确获取历史消息
+#pragma 开发者可在下面添加自己更多的业务cellModel 以便能正确获取历史消息
         if ([cellModel isKindOfClass:[MQTextCellModel class]] ||
             [cellModel isKindOfClass:[MQImageCellModel class]] ||
             [cellModel isKindOfClass:[MQVoiceCellModel class]] ||
@@ -188,7 +188,7 @@ static NSInteger const kMQChatGetHistoryMessageNumber = 20;
       
         if (index == self.cellModels.count - 1) {
 
-#pragma 开发者可在下面添加自己更多的业务cellModel，以便能正确获取历史消息
+#pragma 开发者可在下面添加自己更多的业务cellModel 以便能正确获取历史消息
             if ([cellModel isKindOfClass:[MQTextCellModel class]] ||
                 [cellModel isKindOfClass:[MQImageCellModel class]] ||
                 [cellModel isKindOfClass:[MQVoiceCellModel class]] ||
@@ -312,7 +312,7 @@ static NSInteger const kMQChatGetHistoryMessageNumber = 20;
  * 发送“用户正在输入”的消息
  */
 - (void)sendUserInputtingWithContent:(NSString *)content {
-    //[MQServiceToViewInterface sendClientInputtingWithContent:content];
+    [MQServiceToViewInterface sendClientInputtingWithContent:content];
 }
 
 /**
@@ -752,7 +752,6 @@ static NSInteger const kMQChatGetHistoryMessageNumber = 20;
 - (void)addTipCellModelWithTips:(NSString *)tips enableLinesDisplay:(BOOL)enableLinesDisplay {
     MQTipsCellModel *cellModel = [[MQTipsCellModel alloc] initCellModelWithTips:tips cellWidth:self.chatViewWidth enableLinesDisplay:enableLinesDisplay];
     [self.cellModels addObject:cellModel];
-//    [self reloadChatTableView];
     [self.delegate insertCellAtBottomForModelCount: 1];
     
     if (self.delegate) {
@@ -791,7 +790,6 @@ static NSInteger const kMQChatGetHistoryMessageNumber = 20;
         [self.cellModels addObject:cellModel];
         [self.delegate insertCellAtBottomForModelCount: 1];
     }
-//    [self reloadChatTableView];
     [self scrollToButton];
 }
 
@@ -815,7 +813,6 @@ static NSInteger const kMQChatGetHistoryMessageNumber = 20;
     [self.delegate reloadChatTableView];
     MQTipsCellModel *cellModel = [[MQTipsCellModel alloc] initWaitingInQueueTipCellModelWithCellWidth:self.chatViewWidth position:position tipType:MQTipTypeWaitingInQueue];
     [self.cellModels addObject:cellModel];
-//    [self reloadChatTableView];
     [self.delegate insertCellAtBottomForModelCount: 1];
     [self scrollToButton];
 }
@@ -1129,8 +1126,8 @@ static NSInteger const kMQChatGetHistoryMessageNumber = 20;
             [self.delegate didGetHistoryMessagesWithCommitTableAdjustment:^{
                 __strong typeof (wself) sself = wself;
                 if (messages.count > 0) {
-                    [sself saveToCellModelsWithMessages:messages isInsertAtFirstIndex:true];
-                    [sself.delegate reloadChatTableView]; // 这个地方不使用 [self.delegate insertCellAtBottomForModelCount: ]; 因为需要整体重新加载之后移动 table 的偏移量
+                     [sself saveToCellModelsWithMessages:messages isInsertAtFirstIndex:true];
+                    [sself.delegate reloadChatTableView]; 
                 }
             }];
         }
@@ -1355,11 +1352,6 @@ static NSInteger const kMQChatGetHistoryMessageNumber = 20;
     
     [self didReceiveNewMessages:@[textMessage]];
     
-//    MQTextCellModel *textCellModel = [[MQTextCellModel alloc] initCellModelWithMessage:textMessage cellWidth:self.chatViewWidth delegate:self];
-//    [self.cellModels addObject:textCellModel];
-////    [self reloadChatTableView];
-//    [self.delegate insertCellAtBottomForModelCount: 1];
-//    [self playReceivedMessageSound];
 }
 
 /**

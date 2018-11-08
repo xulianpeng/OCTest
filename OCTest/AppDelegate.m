@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "RootTabBarController.h"
+#import <MeiQiaSDK/MeiqiaSDK.h>
 @interface AppDelegate ()
 
 @end
@@ -20,6 +21,17 @@
 
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     RootTabBarController *rootVC = [[RootTabBarController alloc]init];
+    
+    [MQManager initWithAppkey:@"009c6d3b9af54a81653c1982a1425e7b" completion:^(NSString *clientId, NSError *error) {
+        
+        NSLog(@"==%@,==%@",clientId,error);
+        
+    }];
+    NSTimeInterval nn = [NSDate date].timeIntervalSince1970;
+    NSInteger mm = round(nn);
+    NSLog(@"==%ld===%f",(long)mm,nn);
+    
+    
     
     self.window.rootViewController = rootVC;
     [self.window makeKeyAndVisible];

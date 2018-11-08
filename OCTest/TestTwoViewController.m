@@ -11,6 +11,8 @@
 #import "Person_CallMyName.h"
 
 #import "AAAViewController.h"
+#import "AFNetworking.h"
+
 @interface TestTwoViewController ()
 {
     UIButton *bt;
@@ -46,9 +48,49 @@
     
 }
 - (void)pushHandle{
-    AAAViewController *oneVC = [AAAViewController new];
-    oneVC.hidesBottomBarWhenPushed = YES;
-    [self.navigationController pushViewController:oneVC animated:true];
+    
+    NSString *requestUrl = @"https://eco-api.meiqia.com/atu/launch";
+    AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
+    
+    
+    NSDictionary *body = [NSDictionary dictionaryWithObject:@"AX4EAAUOEVt4AEFRQUNRcXdlSUFnQkFBQUFRd0xPRDZWcUtCWHlmZ0lBQVFBQ1Fxd2VBaGNCQUFBQXpGOWtENlZxS0JXOUpnQUHlh_FS2Xoa14z6Z77vEurV58U7eMnsYALrRJtoUDrs1klwhxjxpsRFBhIXrGAoAQaFsStSPmPqQH1rWuoqeenf" forKey:@"access_token"];
+    NSData *bodyData = [NSJSONSerialization dataWithJSONObject:body options:NSJSONWritingPrettyPrinted error:nil];
+    
+    NSMutableURLRequest *request = [[AFHTTPRequestSerializer serializer] requestWithMethod:@"POST" URLString:requestUrl parameters:nil error:nil];
+    [request setHTTPBody: bodyData];
+//    [request setValue:[NSString stringWithFormat:@"%lu",bodyData.length] forHTTPHeaderField:@"Content-Length"];
+    [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+//    request.timeoutInterval= 10;
+    
+  
+    
+    AFHTTPResponseSerializer *responseSerializer = [AFHTTPResponseSerializer serializer];
+//    responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json",
+//                                                 @"text/html",
+//                                                 @"text/json",
+//                                                 @"text/javascript",
+//                                                 @"text/plain",
+//                                                 nil];
+    responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json",
+                                                 nil];
+    manager.responseSerializer = responseSerializer;
+    
+    [[manager dataTaskWithRequest:request uploadProgress:nil downloadProgress:nil completionHandler:^(NSURLResponse *response,id responseObject,NSError *error){
+        if(responseObject!=nil){
+
+            NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONWritingPrettyPrinted error:nil ];
+
+            NSLog(@"%@",responseObject);
+        }
+    }]resume];
+    
+    
+//    AAAViewController *oneVC = [AAAViewController new];
+//    oneVC.hidesBottomBarWhenPushed = YES;
+//    [self.navigationController pushViewController:oneVC animated:true];
+    
+   
+    
 }
 
 - (void)didReceiveMemoryWarning {

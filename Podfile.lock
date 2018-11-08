@@ -14,61 +14,188 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
-  - FBRetainCycleDetector (0.1.3)
+  - Bugly (2.5.0)
+  - EAIntroView (2.12.0):
+    - EARestrictedScrollView (~> 1.1.0)
+  - EARestrictedScrollView (1.1.0)
+  - FBRetainCycleDetector (0.1.4)
   - FMDB (2.6.2):
     - FMDB/standard (= 2.6.2)
   - FMDB/standard (2.6.2)
   - IQKeyboardManager (5.0.6)
-  - JCore (1.1.6)
-  - JPush (3.0.7):
-    - JCore (~> 1.1.6)
-  - Masonry (1.0.2)
+  - JCore (1.2.0)
+  - JPush (3.0.9):
+    - JCore (~> 1.2.0)
+  - JZNavigationExtension (2.1)
+  - LPDQuoteImagesView (0.3.3)
+  - LYEmptyView (1.0.3)
+  - Masonry (1.1.0)
   - MBProgressHUD (1.0.0)
-  - Meiqia (3.4.3):
-    - Meiqia/MeiqiaSDK (= 3.4.3)
-    - Meiqia/MQChatViewController (= 3.4.3)
-  - Meiqia/MeiqiaSDK (3.4.3)
-  - Meiqia/MQChatViewController (3.4.3):
+  - Meiqia (3.4.8.1):
+    - Meiqia/MeiqiaSDK (= 3.4.8.1)
+    - Meiqia/MQChatViewController (= 3.4.8.1)
+  - Meiqia/MeiqiaSDK (3.4.8.1)
+  - Meiqia/MQChatViewController (3.4.8.1):
     - Meiqia/MeiqiaSDK
-  - MJExtension (3.0.13)
+  - MJExtension (3.0.15)
   - MJRefresh (3.1.15.1)
   - MLeaksFinder (1.0.0):
     - FBRetainCycleDetector
-  - SDWebImage (4.0.0):
-    - SDWebImage/Core (= 4.0.0)
-  - SDWebImage/Core (4.0.0)
-  - WechatOpenSDK (1.8.0)
+  - MOBFoundation (3.1.6)
+  - pop (1.0.10)
+  - "POP+MCAnimate (2.0.1)":
+    - pop (~> 1.0)
+    - "POP+MCAnimate/Animations (= 2.0.1)"
+    - "POP+MCAnimate/Group (= 2.0.1)"
+    - "POP+MCAnimate/Internal (= 2.0.1)"
+    - "POP+MCAnimate/Shorthand (= 2.0.1)"
+    - "POP+MCAnimate/Velocity (= 2.0.1)"
+  - "POP+MCAnimate/Animations (2.0.1)":
+    - pop (~> 1.0)
+    - "POP+MCAnimate/Group"
+    - "POP+MCAnimate/Internal"
+    - "POP+MCAnimate/Shorthand"
+    - "POP+MCAnimate/Velocity"
+  - "POP+MCAnimate/Group (2.0.1)":
+    - pop (~> 1.0)
+  - "POP+MCAnimate/Internal (2.0.1)":
+    - pop (~> 1.0)
+  - "POP+MCAnimate/Shorthand (2.0.1)":
+    - pop (~> 1.0)
+  - "POP+MCAnimate/Velocity (2.0.1)":
+    - pop (~> 1.0)
+    - "POP+MCAnimate/Internal"
+  - QQ_XGPush (3.0.1)
+  - RegexKitLite-NoWarning (1.1.0)
+  - SDCycleScrollView (1.75):
+    - SDWebImage (>= 4.0.0)
+  - SDWebImage (4.4.1):
+    - SDWebImage/Core (= 4.4.1)
+  - SDWebImage/Core (4.4.1)
+  - ShareSDK3 (4.0.4):
+    - MOBFoundation
+    - ShareSDK3/ShareSDK (= 4.0.4)
+  - ShareSDK3/ShareSDK (4.0.4):
+    - MOBFoundation
+  - ShareSDK3/ShareSDKExtension (4.0.4):
+    - MOBFoundation
+  - ShareSDK3/ShareSDKPlatforms/Copy (4.0.4):
+    - MOBFoundation
+  - ShareSDK3/ShareSDKPlatforms/QQ (4.0.4):
+    - MOBFoundation
+  - ShareSDK3/ShareSDKPlatforms/SMS (4.0.4):
+    - MOBFoundation
+  - ShareSDK3/ShareSDKPlatforms/WeChat (4.0.4):
+    - MOBFoundation
+  - ShareSDK3/ShareSDKUI (4.0.4):
+    - MOBFoundation
+  - SMPageControl (1.2)
+  - SVProgressHUD (2.2.5)
+  - XHLaunchAd (3.4.6)
+  - YYCache (1.0.4)
+  - YYModel (1.0.4)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.1.0)
+  - Bugly (~> 2.5.0)
+  - EAIntroView
   - FMDB (~> 2.6.2)
   - IQKeyboardManager
   - JPush
-  - Masonry (~> 1.0.2)
+  - JZNavigationExtension
+  - LPDQuoteImagesView
+  - LYEmptyView (~> 1.0.2)
+  - Masonry (~> 1.1.0)
   - MBProgressHUD (~> 1.0.0)
-  - Meiqia (= 3.4.3)
+  - Meiqia (~> 3.4.8)
   - MJExtension
   - MJRefresh
   - MLeaksFinder
-  - SDWebImage (~> 4.0.0)
-  - WechatOpenSDK
+  - MOBFoundation
+  - "POP+MCAnimate (= 2.0.1)"
+  - QQ_XGPush (~> 3.0.1)
+  - RegexKitLite-NoWarning (= 1.1.0)
+  - SDCycleScrollView (~> 1.65)
+  - ShareSDK3
+  - ShareSDK3/ShareSDKExtension
+  - ShareSDK3/ShareSDKPlatforms/Copy
+  - ShareSDK3/ShareSDKPlatforms/QQ
+  - ShareSDK3/ShareSDKPlatforms/SMS
+  - ShareSDK3/ShareSDKPlatforms/WeChat
+  - ShareSDK3/ShareSDKUI
+  - SMPageControl (~> 1.2)
+  - SVProgressHUD
+  - XHLaunchAd (~> 3.4.4)
+  - YYCache
+  - YYModel (~> 1.0.4)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - AFNetworking
+    - Bugly
+    - EAIntroView
+    - EARestrictedScrollView
+    - FBRetainCycleDetector
+    - FMDB
+    - IQKeyboardManager
+    - JCore
+    - JPush
+    - JZNavigationExtension
+    - LPDQuoteImagesView
+    - LYEmptyView
+    - Masonry
+    - MBProgressHUD
+    - Meiqia
+    - MJExtension
+    - MJRefresh
+    - MLeaksFinder
+    - MOBFoundation
+    - pop
+    - "POP+MCAnimate"
+    - QQ_XGPush
+    - RegexKitLite-NoWarning
+    - SDCycleScrollView
+    - SDWebImage
+    - ShareSDK3
+    - SMPageControl
+    - SVProgressHUD
+    - XHLaunchAd
+    - YYCache
+    - YYModel
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
-  FBRetainCycleDetector: f0c7b290bf48ae77f6ae060843ce34ae341781eb
+  Bugly: 3ca9f255c01025582df26f9222893b383c7e4b4e
+  EAIntroView: 249559079ddfdbe80e5bcb755c04c3b964b2ac27
+  EARestrictedScrollView: b0c2a3f92fb2610bb44d71c5e4893777c89e45ef
+  FBRetainCycleDetector: 46f8179bbb1c587deee3ea838a1a3ee02acf5015
   FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
   IQKeyboardManager: 077b7f691dfa9d69db9cff66f2bed68ebfc02d9b
-  JCore: 18fc8725124f26e55625eaf224659b3a999dcf63
-  JPush: 111b79b8a0169ab8fd4c486dac3ed166ed69293e
-  Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
+  JCore: b52e3dd73625eec70afd1244bb9c41038aa06087
+  JPush: 48041e8c5ad2ef9b48709eb0888af9640b36e9b0
+  JZNavigationExtension: 45284fc63ba48a9e55b020656d39c86b01ff6a63
+  LPDQuoteImagesView: a72b8a35d07e900b6a6f195e853d24ecc4fcb0d9
+  LYEmptyView: 3a7d1604cff1791d207a498a42101f31e9b12b8c
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
-  Meiqia: ae7aed037c68de44e21b881b862c53e8d20df47f
-  MJExtension: 5932755f451458eefa24239358817f8d291240c7
+  Meiqia: 3c8256bec1a8b68bf6cab1c3fdf9c19fd24e56ce
+  MJExtension: 3f039575db1b135a20699ad298713b26acec1528
   MJRefresh: 5f8552bc25ca8751c010f621c1098dbdaacbccd6
   MLeaksFinder: 8c435bd2f6d070af18cff082b503b21adc130fc0
-  SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
-  WechatOpenSDK: 0ee07a8d492299d3e47372a33da5af26524a7576
+  MOBFoundation: a87c5f11fb87f873337189c3ec0add4d3ec6221a
+  pop: 82ca6b068ce9278fd350fd9dd09482a0ce9492e6
+  "POP+MCAnimate": a99e209148c602512de487f1160a44bf78572024
+  QQ_XGPush: 2824cca429269a397cff8cf1028216412527c59e
+  RegexKitLite-NoWarning: 365d208f8187997e33d9de8baeddfc00728596d8
+  SDCycleScrollView: 884b88f0266dd4708a0e1934975c69cb971707b1
+  SDWebImage: 47e9b5b925cbce75946c23f0c42dd19464189af4
+  ShareSDK3: 75b57bab0cbe3119e281c7668eaad9d48adf3fde
+  SMPageControl: 922892813001cfaf059e86e6801f46a967e9ee29
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  XHLaunchAd: 66ab4431d90ffff0f89d719800d8c2f1738c9ed6
+  YYCache: 8105b6638f5e849296c71f331ff83891a4942952
+  YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: 36d44627ea7f6b226a21f330df89633b396cdf5d
+PODFILE CHECKSUM: 81c8aca3b524001886665d8df79fa98b1d7cbeb1
 
-COCOAPODS: 1.3.1
+COCOAPODS: 1.5.3

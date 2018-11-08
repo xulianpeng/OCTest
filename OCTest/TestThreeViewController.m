@@ -8,6 +8,8 @@
 
 #import "TestThreeViewController.h"
 #import "OneViewController.h"
+#import <MeiQiaSDK/MeiqiaSDK.h>
+#import <Meiqia/MQChatViewManager.h>
 @interface TestThreeViewController ()
 {
     UIButton *bt;
@@ -32,8 +34,11 @@
     
 }
 - (void)pushHandle{
-    OneViewController *oneVC = [OneViewController new];
-    [self.navigationController pushViewController:oneVC animated:true];
+//    OneViewController *oneVC = [OneViewController new];
+//    [self.navigationController pushViewController:oneVC animated:true];
+    
+    MQChatViewManager *manager = [[MQChatViewManager alloc]init];
+    [manager pushMQChatViewControllerInViewController:self];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

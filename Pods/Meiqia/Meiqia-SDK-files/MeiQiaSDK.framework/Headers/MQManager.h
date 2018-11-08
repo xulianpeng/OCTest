@@ -15,8 +15,7 @@
 #import "MQPreChatData.h"
 
 
-#define MQSDKVersion @"3.4.3"
-
+#define MQSDKVersion @"3.4.8"
 @protocol MQManagerDelegate <NSObject>
 
 /**
@@ -83,6 +82,7 @@
  * @param completion 如果初始化成功，将会返回clientId，并且error为nil；如果初始化失败，clientId为空，会返回error
  */
 + (void)initWithAppkey:(NSString*)appKey completion:(void (^)(NSString *clientId, NSError *error))completion;
+
 
 /**
     获取本地初始化过的 app key
@@ -561,6 +561,10 @@
  获取是否第一次上线
  */
 + (BOOL)getLoginStatus;
+/*获取网络是否可用*/
++ (BOOL)obtainNetIsReachable;
 
-
++ (void)refreshPushInfoWithToken:(NSString *)token
+                         Success:(void (^)(BOOL completion))success
+                         failure:(void (^)(NSError *error))failure;
 @end
