@@ -6391,6 +6391,29 @@
 			};
 			name = Debug;
 		};
+		4F52277CC045A771786B4DF7D256EE5F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C650D138CCF2A792058EDAECB4256F93 /* Meiqia.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/Meiqia/Meiqia-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = Meiqia;
+				PRODUCT_NAME = Meiqia;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
 		5090EC1FF893F864C76103F6C6500511 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 04A7E354718211A564163A5E72F3872F /* SDWebImage.xcconfig */;
@@ -6501,6 +6524,30 @@
 				PRIVATE_HEADERS_FOLDER_PATH = "";
 				PRODUCT_MODULE_NAME = RegexKitLite_NoWarning;
 				PRODUCT_NAME = "RegexKitLite-NoWarning";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6FDFFA5FB0894FC3FA317AE45E0B3438 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C650D138CCF2A792058EDAECB4256F93 /* Meiqia.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/Meiqia/Meiqia-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = Meiqia;
+				PRODUCT_NAME = Meiqia;
 				PUBLIC_HEADERS_FOLDER_PATH = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -6875,29 +6922,6 @@
 			};
 			name = Debug;
 		};
-		AAB3528787D3C6D76846F7B7A4D6F91A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C650D138CCF2A792058EDAECB4256F93 /* Meiqia.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/Meiqia/Meiqia-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = Meiqia;
-				PRODUCT_NAME = Meiqia;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
 		BD499DD200531E6D52B9C6360B13C6C5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FDEC372A1476BBAA2FCE7D9A410ADF17 /* MLeaksFinder.xcconfig */;
@@ -6920,30 +6944,6 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
-		};
-		BFD2E39FF7A6E771A7802A0A286950AA /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C650D138CCF2A792058EDAECB4256F93 /* Meiqia.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/Meiqia/Meiqia-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = Meiqia;
-				PRODUCT_NAME = Meiqia;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
 		};
 		C217AD92A343C3EA96E24F51AAFC80AC /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -7427,8 +7427,8 @@
 		AA38828BC948AE83E5AD29C8E04413FC /* Build configuration list for PBXNativeTarget "Meiqia" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AAB3528787D3C6D76846F7B7A4D6F91A /* Debug */,
-				BFD2E39FF7A6E771A7802A0A286950AA /* Release */,
+				4F52277CC045A771786B4DF7D256EE5F /* Debug */,
+				6FDFFA5FB0894FC3FA317AE45E0B3438 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

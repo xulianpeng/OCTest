@@ -21,6 +21,11 @@
 
 @implementation TestTwoViewController
 
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    [[XLPAFManager shared] cancelOperationWithUrl:@"www.baidu.com"];
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -48,7 +53,7 @@
     
 }
 - (void)pushHandle{
-    
+    /*
     NSString *requestUrl = @"https://eco-api.meiqia.com/atu/launch";
     AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
     
@@ -83,11 +88,11 @@
             NSLog(@"%@",responseObject);
         }
     }]resume];
+    */
     
-    
-//    AAAViewController *oneVC = [AAAViewController new];
-//    oneVC.hidesBottomBarWhenPushed = YES;
-//    [self.navigationController pushViewController:oneVC animated:true];
+    AAAViewController *oneVC = [AAAViewController new];
+    oneVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:oneVC animated:true];
     
    
     

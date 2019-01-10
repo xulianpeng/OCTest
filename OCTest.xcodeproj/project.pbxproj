@@ -30,6 +30,7 @@
 		07E37D921EAED91D005EA505 /* OCTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E37D911EAED91D005EA505 /* OCTestTests.m */; };
 		07E37D9D1EAED91E005EA505 /* OCTestUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E37D9C1EAED91E005EA505 /* OCTestUITests.m */; };
 		894C611D1EE7DC5100603D78 /* UITextView+XLPTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 894C611C1EE7DC5100603D78 /* UITextView+XLPTextView.m */; };
+		8994B0AA21E72B4C00189249 /* TestLockObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 8994B0A921E72B4C00189249 /* TestLockObject.m */; };
 		89A3D1BE1F1A1A0A00EACCAC /* NSString+XLPStringMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A3D1BD1F1A1A0A00EACCAC /* NSString+XLPStringMaker.m */; };
 		89A3D1C21F1CC5CC00EACCAC /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A3D1C11F1CC5CC00EACCAC /* Person.m */; };
 		89D0FD4D2019DABF00681C15 /* AAAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D0FD4C2019DABF00681C15 /* AAAViewController.m */; };
@@ -106,6 +107,8 @@
 		8925292F208ED989008403D9 /* libMeiqia.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libMeiqia.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		894C611B1EE7DC5100603D78 /* UITextView+XLPTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+XLPTextView.h"; sourceTree = "<group>"; };
 		894C611C1EE7DC5100603D78 /* UITextView+XLPTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+XLPTextView.m"; sourceTree = "<group>"; };
+		8994B0A821E72B4C00189249 /* TestLockObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestLockObject.h; sourceTree = "<group>"; };
+		8994B0A921E72B4C00189249 /* TestLockObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestLockObject.m; sourceTree = "<group>"; };
 		89A3D1BC1F1A1A0A00EACCAC /* NSString+XLPStringMaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+XLPStringMaker.h"; sourceTree = "<group>"; };
 		89A3D1BD1F1A1A0A00EACCAC /* NSString+XLPStringMaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+XLPStringMaker.m"; sourceTree = "<group>"; };
 		89A3D1C01F1CC5CC00EACCAC /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
@@ -297,6 +300,8 @@
 			children = (
 				89D0FD4B2019DABF00681C15 /* AAAViewController.h */,
 				89D0FD4C2019DABF00681C15 /* AAAViewController.m */,
+				8994B0A821E72B4C00189249 /* TestLockObject.h */,
+				8994B0A921E72B4C00189249 /* TestLockObject.m */,
 			);
 			path = TwoGroup;
 			sourceTree = "<group>";
@@ -522,6 +527,7 @@
 				07D9DF361EAF180800F07715 /* UILabel+XLPLabelMaker.m in Sources */,
 				07D9DF1F1EAEEDC000F07715 /* RootTabBarController.m in Sources */,
 				07D9DF391EAF189C00F07715 /* UIButton+XLPButtonMaker.m in Sources */,
+				8994B0AA21E72B4C00189249 /* TestLockObject.m in Sources */,
 				89F803C11FFF2BF800B9BD01 /* TwoViewController.m in Sources */,
 				07D9DF1C1EAEED8200F07715 /* XLPBaseNavigationVController.m in Sources */,
 				89F803BE1FFF2BEE00B9BD01 /* OneViewController.m in Sources */,

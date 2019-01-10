@@ -17,4 +17,7 @@
 - (void)Get:(NSString *)urlStr para:(NSDictionary *)para succeed:(XLPAFSuccessBlock)succeedBlock;
 - (void)POST:(NSString *)urlStr para:(NSDictionary *)para succeed:(XLPAFSuccessBlock)succeedBlock;
 
+- (void)cancelOperationWithUrl:(NSURL *)url;
+- (void)pauseOperationWithUrl:(NSURL *)url;
+- (void)resumeOperationWithUrl:(NSURL *)url;
 @end

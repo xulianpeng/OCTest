@@ -44,7 +44,7 @@ target ‘OCTest’  do
     pod 'Bugly', '~> 2.5.0'
     pod 'YYCache'
     pod 'LPDQuoteImagesView'
-    pod 'Meiqia', '~> 3.4.8'
+    pod 'Meiqia', '~>3.4.9'
     pod 'MLeaksFinder'
     pod 'MBProgressHUD', '~> 1.0.0'
     pod 'FMDB', '~> 2.6.2'

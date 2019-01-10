@@ -32,6 +32,14 @@
     NSLog(@"==%ld===%f",(long)mm,nn);
     
     
+    NSMutableArray * arr = [NSMutableArray new];
+    [arr addObject:@"123"]; //0
+    [arr addObject:@"1234"];
+    [arr addObject:@"1235"];
+    [arr addObject:@"1236"];
+    [arr addObject:@"1237"]; //4
+    
+    
     
     self.window.rootViewController = rootVC;
     [self.window makeKeyAndVisible];
