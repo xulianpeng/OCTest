@@ -29,11 +29,18 @@
 		07E37D871EAED91D005EA505 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07E37D851EAED91D005EA505 /* LaunchScreen.storyboard */; };
 		07E37D921EAED91D005EA505 /* OCTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E37D911EAED91D005EA505 /* OCTestTests.m */; };
 		07E37D9D1EAED91E005EA505 /* OCTestUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E37D9C1EAED91E005EA505 /* OCTestUITests.m */; };
+		89365FD8222D11B200797920 /* EasyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 89365FD7222D11B200797920 /* EasyModel.m */; };
+		89365FDB222D11D300797920 /* EasyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 89365FDA222D11D300797920 /* EasyCell.m */; };
 		894C611D1EE7DC5100603D78 /* UITextView+XLPTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 894C611C1EE7DC5100603D78 /* UITextView+XLPTextView.m */; };
 		8994B0AA21E72B4C00189249 /* TestLockObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 8994B0A921E72B4C00189249 /* TestLockObject.m */; };
 		89A3D1BE1F1A1A0A00EACCAC /* NSString+XLPStringMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A3D1BD1F1A1A0A00EACCAC /* NSString+XLPStringMaker.m */; };
 		89A3D1C21F1CC5CC00EACCAC /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A3D1C11F1CC5CC00EACCAC /* Person.m */; };
 		89D0FD4D2019DABF00681C15 /* AAAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D0FD4C2019DABF00681C15 /* AAAViewController.m */; };
+		89EE4828222D1A920035CEB8 /* TwoTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89EE4827222D1A920035CEB8 /* TwoTableController.m */; };
+		89F5694A222D2AE4004FC29E /* CircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 89F56945222D2AE3004FC29E /* CircleView.m */; };
+		89F5694B222D2AE4004FC29E /* CircleLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 89F56946222D2AE3004FC29E /* CircleLayer.m */; };
+		89F5694C222D2AE4004FC29E /* XlpRefreshHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 89F56947222D2AE3004FC29E /* XlpRefreshHeaderView.m */; };
+		89F5694F222D3ED5004FC29E /* XlpRefreshFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 89F5694E222D3ED5004FC29E /* XlpRefreshFooterView.m */; };
 		89F803BE1FFF2BEE00B9BD01 /* OneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89F803BD1FFF2BEE00B9BD01 /* OneViewController.m */; };
 		89F803C11FFF2BF800B9BD01 /* TwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89F803C01FFF2BF800B9BD01 /* TwoViewController.m */; };
 		89F803C41FFF80AF00B9BD01 /* XlpCountDownView.m in Sources */ = {isa = PBXBuildFile; fileRef = 89F803C31FFF80AF00B9BD01 /* XlpCountDownView.m */; };
@@ -105,6 +112,10 @@
 		07E37DAC1EAEDA01005EA505 /* MyProject.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyProject.pch; sourceTree = "<group>"; };
 		6B6124D1092C9422038546FB /* Pods-OCTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-OCTest/Pods-OCTest.release.xcconfig"; sourceTree = "<group>"; };
 		8925292F208ED989008403D9 /* libMeiqia.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libMeiqia.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		89365FD6222D11B200797920 /* EasyModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EasyModel.h; sourceTree = "<group>"; };
+		89365FD7222D11B200797920 /* EasyModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EasyModel.m; sourceTree = "<group>"; };
+		89365FD9222D11D300797920 /* EasyCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EasyCell.h; sourceTree = "<group>"; };
+		89365FDA222D11D300797920 /* EasyCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EasyCell.m; sourceTree = "<group>"; };
 		894C611B1EE7DC5100603D78 /* UITextView+XLPTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+XLPTextView.h"; sourceTree = "<group>"; };
 		894C611C1EE7DC5100603D78 /* UITextView+XLPTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+XLPTextView.m"; sourceTree = "<group>"; };
 		8994B0A821E72B4C00189249 /* TestLockObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestLockObject.h; sourceTree = "<group>"; };
@@ -116,6 +127,16 @@
 		89A3D1C31F1CC60200EACCAC /* Person_CallMyName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person_CallMyName.h; sourceTree = "<group>"; };
 		89D0FD4B2019DABF00681C15 /* AAAViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AAAViewController.h; sourceTree = "<group>"; };
 		89D0FD4C2019DABF00681C15 /* AAAViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AAAViewController.m; sourceTree = "<group>"; };
+		89EE4826222D1A920035CEB8 /* TwoTableController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TwoTableController.h; sourceTree = "<group>"; };
+		89EE4827222D1A920035CEB8 /* TwoTableController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TwoTableController.m; sourceTree = "<group>"; };
+		89F56944222D2AE3004FC29E /* XlpRefreshHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XlpRefreshHeaderView.h; sourceTree = "<group>"; };
+		89F56945222D2AE3004FC29E /* CircleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleView.m; sourceTree = "<group>"; };
+		89F56946222D2AE3004FC29E /* CircleLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleLayer.m; sourceTree = "<group>"; };
+		89F56947222D2AE3004FC29E /* XlpRefreshHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XlpRefreshHeaderView.m; sourceTree = "<group>"; };
+		89F56948222D2AE3004FC29E /* CircleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleView.h; sourceTree = "<group>"; };
+		89F56949222D2AE3004FC29E /* CircleLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleLayer.h; sourceTree = "<group>"; };
+		89F5694D222D3ED5004FC29E /* XlpRefreshFooterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XlpRefreshFooterView.h; sourceTree = "<group>"; };
+		89F5694E222D3ED5004FC29E /* XlpRefreshFooterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XlpRefreshFooterView.m; sourceTree = "<group>"; };
 		89F803BC1FFF2BEE00B9BD01 /* OneViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OneViewController.h; sourceTree = "<group>"; };
 		89F803BD1FFF2BEE00B9BD01 /* OneViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OneViewController.m; sourceTree = "<group>"; };
 		89F803BF1FFF2BF800B9BD01 /* TwoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TwoViewController.h; sourceTree = "<group>"; };
@@ -179,6 +200,7 @@
 		07E37D681EAED91D005EA505 = {
 			isa = PBXGroup;
 			children = (
+				89F56943222D2AE3004FC29E /* RefreshHeader */,
 				898B532A1EF147F9001805D5 /* CTest */,
 				07E37DAB1EAED94F005EA505 /* Base */,
 				07E37DAA1EAED945005EA505 /* Lib */,
@@ -302,8 +324,29 @@
 				89D0FD4C2019DABF00681C15 /* AAAViewController.m */,
 				8994B0A821E72B4C00189249 /* TestLockObject.h */,
 				8994B0A921E72B4C00189249 /* TestLockObject.m */,
+				89EE4826222D1A920035CEB8 /* TwoTableController.h */,
+				89EE4827222D1A920035CEB8 /* TwoTableController.m */,
+				89365FD6222D11B200797920 /* EasyModel.h */,
+				89365FD7222D11B200797920 /* EasyModel.m */,
+				89365FD9222D11D300797920 /* EasyCell.h */,
+				89365FDA222D11D300797920 /* EasyCell.m */,
 			);
 			path = TwoGroup;
+			sourceTree = "<group>";
+		};
+		89F56943222D2AE3004FC29E /* RefreshHeader */ = {
+			isa = PBXGroup;
+			children = (
+				89F56944222D2AE3004FC29E /* XlpRefreshHeaderView.h */,
+				89F56945222D2AE3004FC29E /* CircleView.m */,
+				89F56946222D2AE3004FC29E /* CircleLayer.m */,
+				89F56947222D2AE3004FC29E /* XlpRefreshHeaderView.m */,
+				89F5694D222D3ED5004FC29E /* XlpRefreshFooterView.h */,
+				89F5694E222D3ED5004FC29E /* XlpRefreshFooterView.m */,
+				89F56948222D2AE3004FC29E /* CircleView.h */,
+				89F56949222D2AE3004FC29E /* CircleLayer.h */,
+			);
+			path = RefreshHeader;
 			sourceTree = "<group>";
 		};
 		89F803BB1FFF2BC100B9BD01 /* Third */ = {
@@ -519,6 +562,7 @@
 				07D9DF3C1EAF1E2400F07715 /* XLPUIMake.m in Sources */,
 				89A3D1C21F1CC5CC00EACCAC /* Person.m in Sources */,
 				89A3D1BE1F1A1A0A00EACCAC /* NSString+XLPStringMaker.m in Sources */,
+				89F5694C222D2AE4004FC29E /* XlpRefreshHeaderView.m in Sources */,
 				89F803C41FFF80AF00B9BD01 /* XlpCountDownView.m in Sources */,
 				07E37D821EAED91D005EA505 /* OCTest.xcdatamodeld in Sources */,
 				07D9DF2B1EAEF9DF00F07715 /* XLPTool.m in Sources */,
@@ -528,17 +572,23 @@
 				07D9DF1F1EAEEDC000F07715 /* RootTabBarController.m in Sources */,
 				07D9DF391EAF189C00F07715 /* UIButton+XLPButtonMaker.m in Sources */,
 				8994B0AA21E72B4C00189249 /* TestLockObject.m in Sources */,
+				89EE4828222D1A920035CEB8 /* TwoTableController.m in Sources */,
 				89F803C11FFF2BF800B9BD01 /* TwoViewController.m in Sources */,
 				07D9DF1C1EAEED8200F07715 /* XLPBaseNavigationVController.m in Sources */,
 				89F803BE1FFF2BEE00B9BD01 /* OneViewController.m in Sources */,
 				894C611D1EE7DC5100603D78 /* UITextView+XLPTextView.m in Sources */,
 				89D0FD4D2019DABF00681C15 /* AAAViewController.m in Sources */,
+				89365FDB222D11D300797920 /* EasyCell.m in Sources */,
 				07E37D761EAED91D005EA505 /* main.m in Sources */,
+				89F5694B222D2AE4004FC29E /* CircleLayer.m in Sources */,
+				89365FD8222D11B200797920 /* EasyModel.m in Sources */,
 				07D9DF461EB0888A00F07715 /* UITextField+XLPTextFieldMaker.m in Sources */,
 				07D9DF311EAEFDD000F07715 /* FMDBManager.m in Sources */,
 				07D9DF221EAEEE6A00F07715 /* TestOneViewController.m in Sources */,
+				89F5694A222D2AE4004FC29E /* CircleView.m in Sources */,
 				07D9DF281EAEEE8700F07715 /* TestThreeViewController.m in Sources */,
 				07D9DF3F1EAF21D400F07715 /* UIControl+XLPControl.m in Sources */,
+				89F5694F222D3ED5004FC29E /* XlpRefreshFooterView.m in Sources */,
 				07D9DF321EAEFDD000F07715 /* XLPAFManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

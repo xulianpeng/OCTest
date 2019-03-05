@@ -35,5 +35,7 @@ target ‘OCTest’  do
     pod 'MJExtension'
     pod 'JPush'
     pod 'JZNavigationExtension'
+    pod 'RealReachability'
+    pod 'Reachability'
 
 end

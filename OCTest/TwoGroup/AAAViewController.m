@@ -8,6 +8,8 @@
 
 #import "AAAViewController.h"
 #import "TestLockObject.h"
+#import <RealReachability/RealReachability.h>
+
 @interface AAAViewController ()
 {
     UITextView *inputTextView;
@@ -25,6 +27,35 @@
     inputTextView = [[UITextView alloc]initWithFrame:CGRectMake(0,self.view.frame.size.height - 60, self.view.frame.size.width, 60)];
     [self.view addSubview:inputTextView];
     inputTextView.backgroundColor = [UIColor yellowColor];
+    
+    
+//    [GLobalRealReachability reachabilityWithBlock:^(ReachabilityStatus status) {
+//
+//        NSLog(@"当前的网络状态111===%ld",(long)status);
+//    }];
+    
+    
+    WWANAccessType wifistr = [RealReachability.sharedInstance currentWWANtype];
+    
+    WWANAccessType accessType = [GLobalRealReachability currentWWANtype];
+
+    NSLog(@"当前的网络状态222====%ld",(long)wifistr);
+    NSLog(@"当前的网络状态333====%ld",(long)accessType);
+    ReachabilityStatus status = [GLobalRealReachability currentReachabilityStatus];
+    NSLog(@"当前的网络状态444====%ld",(long)status);
+
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(networkChanged:)
+                                                 name:kRealReachabilityChangedNotification
+                                               object:nil];
+
+
+}
+- (void)networkChanged:(NSNotification *)notification
+{
+    RealReachability *reachability = (RealReachability *)notification.object;
+    ReachabilityStatus status = [reachability currentReachabilityStatus];
+    NSLog(@"currentStatus:%@",@(status));
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "RootTabBarController.h"
 #import <MeiQiaSDK/MeiqiaSDK.h>
+#import <RealReachability/RealReachability.h>
 @interface AppDelegate ()
 
 @end
@@ -19,6 +20,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 #pragma mark ==== 新创建一个工程 需要删除sb中的默认的视图 和 系统默认生成的视图,创建pch文件,引入第三方库 
 
+    [GLobalRealReachability startNotifier];
+    
+    
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     RootTabBarController *rootVC = [[RootTabBarController alloc]init];
     

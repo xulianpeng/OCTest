@@ -10,6 +10,7 @@
 #import "OneViewController.h"
 #import <MeiQiaSDK/MeiqiaSDK.h>
 #import <Meiqia/MQChatViewManager.h>
+
 @interface TestThreeViewController ()
 {
     UIButton *bt;
@@ -30,6 +31,8 @@
     [bt addTarget:self action:@selector(pushHandle) forControlEvents:UIControlEventTouchUpInside];
     bt.backgroundColor = [UIColor cyanColor];
     
+    
+   
     
     
 }

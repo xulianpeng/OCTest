@@ -13,6 +13,7 @@
 #import "AAAViewController.h"
 #import "AFNetworking.h"
 
+#import "TwoGroup/TwoTableController.h"
 @interface TestTwoViewController ()
 {
     UIButton *bt;
@@ -90,7 +91,7 @@
     }]resume];
     */
     
-    AAAViewController *oneVC = [AAAViewController new];
+    TwoTableController *oneVC = [TwoTableController new];
     oneVC.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:oneVC animated:true];
     
